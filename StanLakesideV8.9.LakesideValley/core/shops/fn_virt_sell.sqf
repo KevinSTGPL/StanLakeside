@@ -6,13 +6,22 @@
 	Description:
 	Sell a virtual item to the store / shop
 */
-private["_type","_index","_price","_var","_amount","_name"];
+private["_type","_index","_price","_var","_amount","_name","_marketprice"];
 if((lbCurSel 2402) == -1) exitWith {};
 _type = lbData[2402,(lbCurSel 2402)];
 _index = [_type,__GETC__(sell_array)] call fnc_index;
 if(_index == -1) exitWith {};
 _price = (__GETC__(sell_array) select _index) select 1;
 _var = [_type,0] call life_fnc_varHandle;
+
+
+//Dynamiczny rynek
+_marketprice = [_type] call life_fnc_marketGetBuyPrice;
+if(_marketprice != -1) then
+{
+	_price = _marketprice;
+};
+//
 
 _amount = ctrlText 2405;
 if(!([_amount] call fnc_isnumber)) exitWith {[localize "STR_Shop_Virt_NoNum", false] spawn domsg;};
@@ -46,5 +55,18 @@ if(life_shop_type == "heroin") then
 		_array pushBack [getPlayerUID player,profileName,_price];
 		life_shop_npc setVariable["sellers",_array,true];
 	};
+	
+	//Dynamiczny rynek
+	if(_marketprice != -1) then 
+	{ 
+		[_type, _amount] spawn
+		{
+			sleep 120;
+			[_this select 0,_this select 1] call life_fnc_marketSell;
+		};
+		[] call life_fnc_virt_update; 
+	};
+	//
+	
 };
 

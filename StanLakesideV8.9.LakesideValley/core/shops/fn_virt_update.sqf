@@ -26,7 +26,19 @@ ctrlSetText[2403,format["%1", _shop_data select 0]];
 	_index = [_x,__GETC__(buy_array)] call fnc_index;
 	if(_index != -1) then
 	{
+		
+		
 		_price = (__GETC__(buy_array) select _index) select 1;
+		
+		//Dynamiczny Rynek
+		_marketprice = [_x] call life_fnc_marketGetBuyPrice;
+		if(_marketprice != -1) then
+		{
+			_price = _marketprice;
+		};
+		//
+		
+		
 		_item_list lbAdd format["%1  ($%2)",_name,[_price] call life_fnc_numberText];
 		_item_list lbSetData [(lbSize _item_list)-1,_x];
 		_item_list lbSetValue [(lbSize _item_list)-1,_price];
@@ -44,3 +56,6 @@ ctrlSetText[2403,format["%1", _shop_data select 0]];
 		_gear_list lbSetData [(lbSize _gear_list)-1,_x];
 	};
 } foreach (_shop_data select 1);
+
+//Dynamiczny rynek
+//[_shop_data select 1] spawn life_fnc_marketShortView;

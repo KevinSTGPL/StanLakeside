@@ -497,6 +497,24 @@ class Life_Client_Core
 		class sendToJail {};
 	};
 	
+	class Market
+	{
+		file = "core\market";
+		class openMarketView;
+		class refreshMarketView;
+		class marketShortView;
+		class marketBuy;
+		class marketSell;
+		class marketGetBuyPrice;
+		class marketGetSellPrice;
+		class marketconfiguration;
+		class marketReset;
+		class marketChange;
+		class marketGetRow;
+		class marketGetPriceRow;
+		class marketSetPriceRow;
+	};
+	
 	class Dialog_Controls
 	{
 		file = "dialog\function";

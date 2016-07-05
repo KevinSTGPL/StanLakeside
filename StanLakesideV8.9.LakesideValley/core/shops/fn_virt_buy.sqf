@@ -25,6 +25,14 @@ buying_virt_item = true;
 
 _name = [([_type,0] call life_fnc_varHandle)] call life_fnc_varToStr;
 
+//Dynamiczny rynek
+_marketprice = [_type] call life_fnc_marketGetBuyPrice;
+if(_marketprice != -1) then
+{
+	_price = _marketprice;
+};
+//
+
 if(([true,_type,_amount] call life_fnc_handleInv)) then
 {
 	if((_price * _amount) < cash_in_hand) then {
@@ -43,7 +51,18 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 	};
 	[format[localize "STR_Shop_Virt_BoughtItem",_amount,_name,[(_price * _amount)] call life_fnc_numberText], false] spawn doquickmsg;
 	__SUB__(cash_in_hand,(_price * _amount));
-
+	
+	//Dynamiczny rynek
+	if(_marketprice != -1) then 
+	{ 
+		//##94
+		[_type, _amount] spawn
+		{
+			sleep 120;
+			[_this select 0,_this select 1] call life_fnc_marketBuy;
+		};
+	};
+	//
 	[] call life_fnc_virt_update;
 };
 
