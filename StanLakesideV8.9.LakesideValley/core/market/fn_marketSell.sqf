@@ -42,21 +42,16 @@ if(!_israw) then
 		if((count _x) == 2) then
 		{
 		    _relamount = ceil (_amount * (_x select 1));
-		
 		    if(_relamount > 0) then
-		    {
-			[_x select 0, _relamount, true, false] call life_fnc_marketBuy; //Make prices higher, no broadcast!
+			{
+				[_x select 0, _relamount, true, false] call life_fnc_marketBuy; //Make prices higher, no broadcast!
 		    }
 		    else
 		    {
-			_relamount = -(_relamount);
-			[_x select 0, _relamount, true, false] call life_fnc_marketSell; //Make prices higher, no broadcast!
+				_relamount = -(_relamount);
+				[_x select 0, _relamount, true, false] call life_fnc_marketSell; //Make prices higher, no broadcast!
 		    };
 		}
-		else
-		{
-		    
-		};
 		
 	}
 	foreach (_arr_resource select 6); //in change array
@@ -64,3 +59,5 @@ if(!_israw) then
 
 //Broadcast now if can send
  if(_send) then {publicVariable "life_market_prices";};
+ 
+["marketSell - 63", false] spawn domsg;

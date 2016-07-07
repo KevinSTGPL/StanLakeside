@@ -55,3 +55,5 @@ if(!_israw) then
 
 //Broadcast now if can send
  if(_send) then {publicVariable "life_market_prices";};
+
+["marketBuy - 59", false] spawn domsg;

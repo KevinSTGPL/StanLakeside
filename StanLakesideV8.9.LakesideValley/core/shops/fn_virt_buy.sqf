@@ -59,6 +59,7 @@ if(_marketprice != -1) then
 	//##94
 	[_type, _amount] spawn
 	{
+		["Virt_buy - spawn 62", false] spawn domsg; 
 		sleep 120;
 		[_this select 0,_this select 1] call life_fnc_marketBuy;
 	};
