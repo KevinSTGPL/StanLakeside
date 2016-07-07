@@ -428,8 +428,8 @@ sell_array =
 	["weddingring",80],
 	["bec",1],
 	["medkit",5],
-	["cleankit",1],
 	["mobilephone",1],
+	["cleankit",1],
 	["panicbutton",1],
 	["MDMAu",110],
 	["MDMAp",650],
@@ -529,7 +529,7 @@ __CONST__(sell_array,sell_array);
 
 buy_array =
 [
-       ["cleankit",100],
+        ["cleankit",100],
         ["medkit",1200],
         ["condom",100],
         ["weddingring",10000],
