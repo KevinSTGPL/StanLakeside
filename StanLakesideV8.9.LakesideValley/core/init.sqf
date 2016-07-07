@@ -53,7 +53,7 @@ waitUntil {life_session_completed};
 
 [] spawn life_fnc_marketconfiguration;
 waitUntil {!isNil "life_market_resources"};
-["Dynamiczny rynek wczytany."] spawn domsq;
+["Dynamiczny rynek wczytany."] spawn domsg;
 
 fnc_checkPhone = {
 
