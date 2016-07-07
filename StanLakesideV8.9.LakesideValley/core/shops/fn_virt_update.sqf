@@ -43,7 +43,7 @@ ctrlSetText[2403,format["%1", _shop_data select 0]];
 		_item_list lbSetData [(lbSize _item_list)-1,_x];
 		_item_list lbSetValue [(lbSize _item_list)-1,_price];
 	};
-} foreach (_shop_data select 1);
+} forEach (_shop_data select 1);
 
 {
 	_var = [_x,0] call life_fnc_varHandle;
@@ -55,7 +55,7 @@ ctrlSetText[2403,format["%1", _shop_data select 0]];
 		_gear_list lbAdd format["%1x %2",_val,_name];
 		_gear_list lbSetData [(lbSize _gear_list)-1,_x];
 	};
-} foreach (_shop_data select 1);
+} forEach (_shop_data select 1);
 
 //Dynamiczny rynek
-//[_shop_data select 1] spawn life_fnc_marketShortView;
+[_shop_data select 1] spawn life_fnc_marketShortView;
