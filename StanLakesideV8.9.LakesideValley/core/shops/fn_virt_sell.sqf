@@ -55,18 +55,16 @@ if(life_shop_type == "heroin") then
 		_array pushBack [getPlayerUID player,profileName,_price];
 		life_shop_npc setVariable["sellers",_array,true];
 	};
-	
-	//Dynamiczny rynek
-	if(_marketprice != -1) then 
-	{ 
-		[_type, _amount] spawn
-		{
-			sleep 120;
-			[_this select 0,_this select 1] call life_fnc_marketSell;
-		};
-		[] call life_fnc_virt_update; 
-	};
-	//
-	
 };
+//Dynamiczny rynek
+if(_marketprice != -1) then 
+{ 
+	[_type, _amount] spawn
+	{
+		sleep 120;
+		[_this select 0,_this select 1] call life_fnc_marketSell;
+	};
+	[] call life_fnc_virt_update; 
+};
+//
 
