@@ -51,7 +51,7 @@ waitUntil {life_session_completed};
 
 [] spawn life_fnc_escInterupt;
 
-[] spawn life_fnc_marketconfiguration;
+[] spawn life_fnc_marketConfiguration;
 waitUntil {!isNil "life_market_resources"};
 ["Dynamiczny rynek wczytany."] spawn domsg;
 

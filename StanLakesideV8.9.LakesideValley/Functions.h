@@ -507,7 +507,7 @@ class Life_Client_Core
 		class marketSell;
 		class marketGetBuyPrice;
 		class marketGetSellPrice;
-		class marketconfiguration;
+		class marketConfiguration;
 		class marketReset;
 		class marketChange;
 		class marketGetRow;

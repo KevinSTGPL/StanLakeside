@@ -6,17 +6,17 @@
 */
 
 ////////////MAIN CONFIG
-
+///[Startowa, minimalna, maksymalna, mnoznik kupna, mnoznik sprzedazy
 life_market_resources = [
-	["glass", 145, 0, 200, 5, 3, 
+	["glass", 145, 0, 200, 1, 1
 		[ 
 			["salt_r",1] //If you sell 1x goldr, the market system will "buy" 1x diamondc => diamondc price will increase
-		]
+		], 500
 	],
-	["salt_r", 145, 0, 200, 5, 3, 
+	["salt_r", 145, 0, 200, 1, 1, 
 		[ 
 			["glass",1] //If you sell 1x goldr, the market system will "buy" 1x diamondc => diamondc price will increase
-		]
+		], 500
 	]
 	
 
