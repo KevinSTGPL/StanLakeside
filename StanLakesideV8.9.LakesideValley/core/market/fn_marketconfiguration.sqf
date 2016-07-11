@@ -8,7 +8,7 @@
 ////////////MAIN CONFIG
 ///[Startowa, minimalna, maksymalna, mnoznik kupna, mnoznik sprzedazy
 life_market_resources = [
-		["glass", 145, 0, 200, 1, 1,
+	["glass", 145, 0, 200, 1, 1,
 		[ 
 			["salt_r",1],
 			["oilp",1],
