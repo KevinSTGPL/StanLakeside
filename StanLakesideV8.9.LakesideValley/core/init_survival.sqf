@@ -1240,7 +1240,7 @@ fnc_airkit =
 };
 
 
-[] spawn
+/*[] spawn
 {
 	while {true} do
 	{
@@ -1250,6 +1250,7 @@ fnc_airkit =
 		if(player distance rebelshipment < 300 && (rebelshipment getVariable["progress",FALSE])) then { ["You have entered a red-zone, you can be shot if you have a weapon out.", false] spawn domsg; sleep 60;};
 	};
 };
+*/
 
 	fnc_intox =
 	{
