@@ -35,6 +35,8 @@ if(_action) then {
 	
 	["bank","add",(round((_houseCfg select 0)/2))] call life_fnc_handleCash; 
 	_index = life_vehicles find _house;
+	advanced_log = format [localize "STR_DL_AL_soldHouse",profileName,(getPlayerUID player),(round((_houseCfg select 0)/2)),[BANK] call life_fnc_numberText];
+	publicVariableServer "advanced_log";
 	if(_index != -1) then {
 		life_vehicles set[_index,-1];
 		life_vehicles = life_vehicles - [-1];

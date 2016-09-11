@@ -17,4 +17,6 @@ if(!((side _unit) in [civilian,east,independent])) exitWith {}; //Not a civ
 
 detach _unit;
 [_unit,false] remoteExec ["life_fnc_jail",_unit];
+advanced_log = format [localize "STR_DL_AL_Arrested",profileName,(getPlayerUID player),_unit getVariable ["realname",name _unit]];
+publicVariableServer "advanced_log";
 closeDialog 0;

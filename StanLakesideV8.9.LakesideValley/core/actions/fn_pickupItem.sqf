@@ -48,3 +48,5 @@ if(_diff != _itemInfo select 1) then
 		[format[localize "STR_NOTF_Picked",_diff,_itemName], false] spawn domsg;
 	};
 };
+advanced_log = format [localize "STR_DL_AL_pickedUp",profileName,(getPlayerUID player),_diff,_itemName];
+publicVariableServer "advanced_log";

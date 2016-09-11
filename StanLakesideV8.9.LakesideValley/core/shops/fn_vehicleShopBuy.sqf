@@ -114,5 +114,8 @@ life_vehicles pushBack _vehicle; //Add err to the chain.
 if(_mode) then {
 	[(getPlayerUID player),playerSide,_vehicle,_colorIndex] remoteExecCall ["TON_fnc_vehicleCreate",(call life_fnc_HCC)];
 };
+advanced_log = format [localize "STR_DL_AL_boughtVehicle",profileName,(getPlayerUID player),_className,[_purchasePrice] call life_fnc_numberText,[CASH] call life_fnc_numberText,[BANK] call life_fnc_numberText];
+publicVariableServer "advanced_log";
+
 closeDialog 0; //Exit the menu.
 true;

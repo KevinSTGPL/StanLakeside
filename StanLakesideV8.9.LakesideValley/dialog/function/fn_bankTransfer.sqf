@@ -22,4 +22,7 @@ if((_val + _tax) > cash_in_bank) exitWith {[format[localize "STR_ATM_SentMoneyFa
 
 [_val,profileName,name _unit] remoteExecCall ["clientWireTransfer",_unit];
 [] call life_fnc_atmMenu;
+[1] call SOCK_fnc_updatePartial;
 [format[localize "STR_ATM_SentMoneySuccess",[_val] call life_fnc_numberText,_unit getVariable["realname",name _unit],[_tax] call life_fnc_numberText], false] spawn domsg;
+money_log = format [localize "STR_DL_ML_transferredBank",profileName,(getPlayerUID player),_value,_unit getVariable ["realname",name _unit],[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
+publicVariableServer "money_log";

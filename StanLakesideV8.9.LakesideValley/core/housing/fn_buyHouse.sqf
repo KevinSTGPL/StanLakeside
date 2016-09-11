@@ -33,6 +33,8 @@ _action = [
 
 if(_action) then {
 	[_uid,_house] remoteExecCall ["TON_fnc_addHouse",(call life_fnc_HCC)];
+	advanced_log = format [localize "STR_DL_AL_boughtHouse",profileName,(getPlayerUID player),[(_houseCfg select 0)] call life_fnc_numberText,[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
+	publicVariableServer "advanced_log";
 	_house setVariable["house_owner",[_uid,profileName],true];
 	_house setVariable["locked",true,true];
 	_house setVariable["Trunk",[[],0],true];
