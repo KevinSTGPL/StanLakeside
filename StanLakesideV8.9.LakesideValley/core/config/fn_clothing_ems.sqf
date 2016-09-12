@@ -48,7 +48,17 @@ switch (_filter) do
 			["RF_EMSWING_4", nil, 2],
 			["A3L_EMT2","Fire Suit",50],
 			["V_Firefighter", nil, 2],
-			["U_B_Wetsuit","Wet Suit",50]
+			["U_B_Wetsuit","Wet Suit",50],
+			["kif_emt_clothes_shirt_james_obj", nil, 2],
+			["kif_emt_clothes_shirt_trynkiewicz_obj", nil, 2],
+			["kif_emt_clothes_shirt_paramedicfd_obj", nil, 2],
+			["kif_emt_clothes_shirt_officialfd_obj", nil, 2],
+			["kif_emt_clothes_shirt_fd_obj", nil, 2],
+			["kif_emt_clothes_shirt_chieffd_jeff_obj", nil, 2],
+			["kif_emt_clothes_shirt_battalionfd_obj", nil, 2],
+			["kif_emt_clothes_shirt_assistant_marian_obj", nil, 2],
+			["kif_emt_clothes_shirt_emt_pd_obj", nil, 2],
+			["kif_emt_clothes_shirt_emt_pd_ams_obj", nil, 2]
 		];
 	};
 
@@ -136,7 +146,32 @@ switch (_filter) do
 			["RR_EMS_Vests_SearchRescue","Kamizelka Poszukiwawcza",5],
 			["TRYK_V_Bulletproof","Kamizelka na Akcje",2],
 			["U_C_FireFighter","Kamizelka z butla",2],
-			["V_RebreatherB",nil,5]
+			["V_RebreatherB",nil,5],
+			["kif_fire_vest_jeff","Fire Chief Vest J. Favignano",5],
+			["kif_fire_vest_odlamkowy","Fire Assistant Chief M. Odlamkowy",5],
+			["kif_fire_vest_deputy","Fire Chief Deputy Vest",5],
+			["kif_traffic_controller_vest","Traffic Controller Vest",5],
+			["kif_emt_supervisor_vest","Supervisor Vest",5],
+			["kif_fire_rescue_paramedic_vest","Fire Rescue Paramedic Vest",5],
+			["kif_fire_chief_vest","Fire Chief Vest",5],
+			["kif_air_ambulance_vest","Air Ambulance Paramedic Vest",5],
+			["NewEden_Clothing_FDParamedic","FD Paramedic",5],
+			["NewEden_Clothing_EMSEMT","EMS EMT",5],
+			["kif_air_ambulance_vest", nil, 2],
+			["kif_fire_chief_vest", nil, 2],
+			["kif_fire_rescue_paramedic_vest", nil, 2],
+			["kif_emt_supervisior_vest", nil, 2],
+			["kif_traffic_controller_vest", nil, 2],
+			["kif_fire_vest_deputy", nil, 2],
+			["kif_fire_vest_jeff", nil, 2],
+			["kif_fire_vest_odlamkowy", nil, 2],
+			["kif_ems_vest_corvus", nil, 2],
+			["kif_ems_vest_james", nil, 2],
+			["kif_ems_vest_trynkiewicz", nil, 2],
+			["kif_ehs_vest", nil, 2],
+			["kif_p_g_vest", nil, 2],
+			["kif_rr_vest", nil, 2],
+			["kif_ams_vest", nil, 2]
 		];
 	};
 
@@ -157,15 +192,17 @@ switch (_filter) do
 			["koilmedicyellow",nil,5500],
 
 	*/
-			["cg_invisbp","Invisi-Backpack 2.0",5],
-			["tf_anprc155_coyote","DLugie Radio Camo",5],
-			["tf_anprc155","Dlugie Radio",5],
+			["cg_invisbp","Invisi-Backpack 2.0",50],
+			["tf_anprc155_coyote","DLugie Radio Camo",50],
+			["tf_anprc155","Dlugie Radio",50],
+			["TRYK_B_Medbag",nil,50],
 			["TRYK_B_Medbag_BK",nil,50],
-			["B_Bolsa_camp_cruz",nil,5500],
-			["koilmedicwhite",nil,5500],
-			["koilmedicred",nil,5500],
-			["koilmedicblue",nil,5500],
-			["koilmedicyellow",nil,5500]
+			["TRYK_B_Medbag_OD",nil,50],
+			["B_Bolsa_camp_cruz",nil,50],
+			["koilmedicwhite",nil,50],
+			["koilmedicred",nil,50],
+			["koilmedicblue",nil,50],
+			["koilmedicyellow",nil,50]
 		];
 	};
 };

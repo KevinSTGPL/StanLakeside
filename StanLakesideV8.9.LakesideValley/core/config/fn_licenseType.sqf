@@ -18,6 +18,7 @@ switch (_mode) do
 		{
 			case "MDMA": {_var = "license_civ_MDMA"};  // in the upper field
 			case "meth": {_var = "license_civ_meth"};  // in the upper field
+			case "oskp": {_var = "license_civ_oskp"};
 			case "driver": {_var = "license_civ_driver"}; //Drivers License cost
 			case "boat": {_var = "license_civ_boat"}; //Boating license cost
 			case "pilot": {_var = "license_civ_air"}; //Pilot/air license cost
@@ -42,10 +43,9 @@ switch (_mode) do
 			case "cement": {_var = "license_civ_cement"};
 			case "mair": {_var = "license_med_air"};
 			case "home": {_var = "license_civ_home"};
-			case "donator1": {_var = "license_civ_donator1"};
-			case "donator2": {_var = "license_civ_donator2"};
-			case "donator3": {_var = "license_civ_donator3"};
-			case "IAD": {_var = "license_civ_IAD"};
+			//case "donator1": {_var = "license_civ_donator1"};
+			//case "donator2": {_var = "license_civ_donator2"};
+			//case "donator3": {_var = "license_civ_donator3"};
 			
 			case "rifle": {_var = "license_civ_rifle"};
 			default {_var = ""};
@@ -58,6 +58,8 @@ switch (_mode) do
 		{
 			case "license_civ_MDMA": {_var = "MDMA"};  // in the lower field
 			case "license_civ_meth": {_var = "meth"};  // in the lower field
+			case "license_civ_oskp": {_var = "oskp"};
+			case "license_cop_prokurator": {_var = "prokurator"};
 			case "license_civ_driver": {_var = "driver"}; //Drivers License cost
 			case "license_civ_boat": {_var = "boat"}; //Boating license cost
 			case "license_civ_air": {_var = "pilot"}; //Pilot/air license cost
@@ -82,10 +84,9 @@ switch (_mode) do
 			case "license_civ_cement": {_var = "cement"};
 			case "license_med_air": {_var = "mair"};
 			case "license_civ_home": {_var = "home"};
-			case "license_civ_donator1": {_var = "donator1"};
-			case "license_civ_donator2": {_var = "donator2"};
-			case "license_civ_donator3": {_var = "donator3"};
-			case "IAD": {_var = "license_civ_IAD"};
+			//case "license_civ_donator1": {_var = "donator1"};
+			//case "license_civ_donator2": {_var = "donator2"};
+			//case "license_civ_donator3": {_var = "donator3"};
 			
 			case "license_civ_rifle": {_var = "rifle"};
 			default {_var = ""};

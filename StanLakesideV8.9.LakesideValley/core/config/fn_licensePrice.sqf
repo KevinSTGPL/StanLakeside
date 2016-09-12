@@ -11,9 +11,11 @@ if(_type == "") exitWith {-1};
 
 switch (_type) do
 {
-case "MDMA": {1500};
-case "meth": {1500};
-case "coke": {1500};
+	case "MDMA": {1500};
+	case "meth": {1500};
+	case "coke": {1500};
+	case "oskp": {2000};
+	case "prokurator": {2000};
 	case "driver": {300}; //Drivers License cost
 	case "boat": {1500}; //Boating license cost
 	case "pilot": {1500}; //Pilot/air license cost
@@ -38,9 +40,9 @@ case "coke": {1500};
 	case "cement": {650};
 	case "mair": {1500};
 	case "home": {7500};
-	case "donator1": {2000};
-	case "donator2": {2000};
-	case "donator3": {2000};
+	//case "donator1": {2000};
+	//case "donator2": {2000};
+	//case "donator3": {2000};
 	
 	case "rifle": {300};
 };

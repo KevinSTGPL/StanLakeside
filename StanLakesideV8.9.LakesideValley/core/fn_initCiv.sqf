@@ -19,22 +19,22 @@ if(side player == east) then {
 	uiSleep 35;
 };
 
-switch (true) do
+/*switch (true) do
 		{
 			case(license_civ_donator1):
 			{
-				life_paycheck = 600; //Paycheck Amount
+				life_paycheck = 200; //Paycheck Amount
 			};
 			case(license_civ_donator2):
 			{
-				life_paycheck = 800; //Paycheck Amount
+				life_paycheck = 400; //Paycheck Amount
 			};
 			case(license_civ_donator3):
 			{
-				life_paycheck = 1000; //Paycheck Amount
+				life_paycheck = 600; //Paycheck Amount
 			};
 		};
-
+*/
 if(life_karma > 999) then {
 	karma_level = life_karma / 400;
 	karma_level = floor (karma_level);
