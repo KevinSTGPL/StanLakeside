@@ -11,6 +11,7 @@ _filter = param [0,0,[0]];
 
 //Shop Title Name
 ctrlSetText[3103,"Ciuchy Robocze i Uniformy O.S.K.P"];
+if player (!license_civ_oskp) exitwith {hint "Nie nalezysz do OSKP!"};
 
 switch (_filter) do
 {
@@ -83,7 +84,7 @@ switch (_filter) do
 	{
 		[
 			["cg_invisbp",nil,1000],
-			["AM_PoliceBeltv2",nil,1500],
+			["AM_OSKPBelt";,nil,1500],
 			["B_AssaultPack_cbr",nil,250],
 			["B_AssaultPack_rgr",nil,250],
 			["B_AssaultPack_khk",nil,250],
